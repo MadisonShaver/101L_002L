@@ -3,10 +3,26 @@ Program 6
 Madison Shaver
 mlsy7z@umkc.edu
 
-PROBLEM:
+PROBLEM: Caesar encryption/decryption with given key.
 
 ALGORITHM:
-
+    1. Start
+    2. print menu options
+    3. get choice from user (encrypt, decrypt, or quit)
+    4. Continue based on choice
+        4a. encryption
+            4a.1. get phrase from user
+            4a.2. get key from user
+            4a.3. use the ord() function to shift each letter the number of times as the given key
+            4a.4. output encrypted message
+        4b. decryption
+            4b.1. get phrase from user
+            4b.2. get key from user
+            4b.3. use the ord() function to shift each letter backwards the number of times as the given key
+            4b.4. output decrypted message
+        4c. quit     
+    5. Loop steps 2 - 4 until user quits
+    6. End
 '''
 
 import string
