@@ -32,13 +32,13 @@ def encrypt(phrase, key):
     new_phrase = ''
     for char in phrase.upper():
         if char != ' ':
-            char = chr(ord(char) + key)
+            char = string.ascii_uppercase[((ord(char) - 65) + key) % 26]
         new_phrase += char
     return new_phrase
 
 def decrypt(phrase, key):
     '''Decrypts Caesar-encrypted string with specified string.'''
-    message = encrypt(phrase, (key * -1))
+    message = encrypt(phrase, (26 - key))
     return message
 
 def get_input():
